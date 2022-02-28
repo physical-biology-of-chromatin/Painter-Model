@@ -20,9 +20,9 @@ Use appropriate parameter values mentioned in the article.
   >>g_decay             protein decay rate\
   >>m_gfp               mRNA translation rate\
   >>g_mat               protein maturation rate\
-  >>{i_start,i_end}     specifying the painter region\
+  >>{i_start,i_end}     specifying the painter region
   
-For transcription transcribing region can be specified in line 122. 
+For transcription, transcribing region can be specified in line 122. 
 
 ## Output
    Output is stored in the variable fin_out. In line 186 transcription or chromatin state results can be specified as needed. 
