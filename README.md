@@ -4,10 +4,10 @@ Uses Gillespie algorithm to simulate. Ref https://pubs.acs.org/doi/10.1021/j1005
 
 Use appropriate parameter values mentioned in the article. 
 ## Parameters
-  >>K0                  Nucleosome turnover rate\
-  >>Kme                 Acetylation, Methylation rate\
-  >>Eme                 Epsilon - spreading efficiency\
-  >>r                   Allosteric boost\
+  >_K0_                  Nucleosome turnover rate\
+  >_Kme_                 Acetylation, Methylation rate\
+  >_Eme_                 Epsilon - spreading efficiency\
+  >_r _                  Allosteric boost\
   >>delta               Reader Writer Mechanism\
   >>gamma               Contact Probability |i - j| exponent\
   >>delT                Determines the time interval between recording epigenetic configuration state. (Time resolution)\ 
