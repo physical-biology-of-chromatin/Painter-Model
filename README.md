@@ -25,5 +25,5 @@ Use appropriate parameter values mentioned in the article.
 For transcription, transcribing region can be specified in line 122. 
 
 ## Output
-   Output is stored in the variable fin_out. In line 186 transcription or chromatin state results can be specified as needed. 
+   Output is stored in the variable fin_out. Line 186 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
