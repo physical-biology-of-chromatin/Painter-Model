@@ -10,10 +10,10 @@ Use appropriate parameter values mentioned in the article.
   >_r_                   Allosteric boost\
   >_delta_               Reader Writer Mechanism\
   >_gamma_               Contact Probability |i - j| exponent\
-  >_delT_                Determines the time interval between recording epigenetic configuration state (Time resolution)\ 
+  >_delT_                Determines the time interval between recording epigenetic configuration state\ 
   >_limt_                Number of Trajectories or cells\ 
   >_ts_                  Specifies the time at which painter unbinds\   
-  >_a0_                  Maximal transcription rate. Actual would be higher considering leaky rate\
+  >_a0_                  Maximal transcription rate\
   >_d_                   Steepness of transcriptional switch\ 
   >_mc_                  Critical P(M) value at which the switch happens\
   >_m_decay_             mRNA decay rate\
