@@ -7,7 +7,7 @@ Use appropriate parameter values mentioned in the article.
   >_K0_                  Nucleosome turnover rate\
   >_Kme_                 Acetylation, Methylation rate\
   >_Eme_                 Epsilon - spreading efficiency\
-  >_r_                  Allosteric boost\
+  >_r_                   Allosteric boost\
   >_delta_               Reader Writer Mechanism\
   >_gamma_               Contact Probability |i - j| exponent\
   >_delT_                Determines the time interval between recording epigenetic configuration state. (Time resolution)\ 
@@ -23,7 +23,10 @@ Use appropriate parameter values mentioned in the article.
   >_{i_start,i_end}_     specifying the painter region
   
 For transcription, transcribing region can be specified in line 122. 
-
+For enzyme limitation 
+  >Ntot        Total number of HMEs\
+  >rconst      ku/kb = ratio binding-unbinding rates
+   
 ## Output
    Output is stored in the variable fin_out. Line 186 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
