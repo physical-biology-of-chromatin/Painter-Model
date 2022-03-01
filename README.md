@@ -22,11 +22,11 @@ Use appropriate parameter values mentioned in the article.
   >_g_mat_               protein maturation rate\
   >_{i_start,i_end}_     specifying the painter region
   
-For transcription, transcribing region can be specified in line 122. 
+For transcription, transcribing region can be specified in line 130. 
 For enzyme limitation 
   >Ntot        Total number of HMEs\
   >rconst      ku/kb = ratio binding-unbinding rates
-   
+   Uncomment line 100. 
 ## Output
-   Output is stored in the variable fin_out. Line 186 specifies transcription or chromatin state output to be stored. 
+   Output is stored in the variable fin_out. Line 194 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
