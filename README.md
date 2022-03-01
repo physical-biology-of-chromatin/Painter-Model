@@ -10,12 +10,12 @@ Use appropriate parameter values mentioned in the article.
   >_r_                   Allosteric boost\
   >_delta_               Reader Writer Mechanism\
   >_gamma_               Contact Probability |i - j| exponent\
-  >_delT_                Determines the time interval between recording epigenetic configuration state  \ 
-  >_limt_                Number of Trajectories or cells  \ 
+  >_delT_                Determines the time interval between recording epigenetic configuration state<br/> 
+  >_limt_                Number of Trajectories or cells<br/> 
   >_ts_                  Specifies the time at which painter unbinds  \   
   >_a0_                  Maximal transcription rate\
-  >_d_                   Steepness of transcriptional switch  \ 
-  >_mc_                  Critical P(M) value at which the switch happens  \
+  >_d_                   Steepness of transcriptional switch<br/> 
+  >_mc_                  Critical P(M) value at which the switch happens<br/>
   >_m_decay_             mRNA decay rate\
   >_g_decay_             protein decay rate\
   >_m_gfp_               mRNA translation rate\
@@ -23,10 +23,10 @@ Use appropriate parameter values mentioned in the article.
   >_{i_start,i_end}_     specifying the painter region
   
 For transcription, transcribing region can be specified in line 130\ 
-For enzyme limitation 
+For enzyme limitation uncomment line 100. 
   >_Ntot_        Total number of HMEs\
   >_rconst_      ku/kb = ratio binding-unbinding rates
-   Uncomment line 100. 
+    
 ## Output
    Output is stored in the variable fin_out. Line 194 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
