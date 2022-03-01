@@ -12,7 +12,7 @@ Use appropriate parameter values mentioned in the article.
   >_gamma_               Contact Probability |i - j| exponent\
   >_delT_                Determines the time interval between recording epigenetic configuration state<br/> 
   >_limt_                Number of Trajectories or cells<br/> 
-  >_ts_                  Specifies the time at which painter unbinds<br/>   
+  >_ts_                  Specifies the time at which painter unbinds  
   >_a0_                  Maximal transcription rate\
   >_d_                   Steepness of transcriptional switch<br/> 
   >_mc_                  Critical P(M) value at which the switch happens<br/>
