@@ -11,7 +11,39 @@ import numpy as np
 from joblib import Parallel, delayed
 from numba import jit
 
-@jit(nopython=True)           #Upadation Matrix: The function updates the populations according to reaction happening 
+### STANDARD CODE PARAMETERS
+N           = 100               #Total Number of Nucleosomes.
+T           = 300               #End Time
+Tcyc        = 50                #Replication time
+K0          = 0.1              # Nucleosome turnover
+Kme         = 2*K0             # Acetylation, Methylation rate
+Kdme        = 0                # Demethylation rate
+Khdac       = 0                # Deacetylation Rate
+Eme         = .6               # Epsilon - spreading efficiency
+Edme        = 0                # Demethylation Spreading efficiency
+r           = 0                # Allosteric boost
+delta       = 0.0              # Reader Writer Mechanism
+gamma       = 1                # Contact Probability |i - j| exponent
+delT        = 1                # Determines the time interval between recording epigenetic configuration state. (Time resolution) 
+snaps       = np.int64(T/delT) # Number of timepoints
+limt        = 2400             # Number of Trajectories or cells 
+ts          = 20000            # Specifies the time at which painter unbinds
+i_start     = 48                    
+i_end       = 52
+#TRANSCRIPTION
+a0          =  1               # Maximal transcription rate. 
+d           =  0.05            # Steepness of transcriptional switch  
+mc          = -0.4             # Critical magenetization value at which the switch happens
+mRNA        = 0
+GFP         = 0
+GFP_m       = 0
+m_decay     = 1/10
+g_decay     = 1/30
+m_gfp       = 1
+g_mat       = 1/10
+Ntot        = 10
+rconst      = 1
+@jit(nopython=True)
 def updation(num,population,N):
             c0        = population[0].copy()
             ci        = population[1].copy()
@@ -192,50 +224,10 @@ def Stocha(traject_num):
                         transconfig[ii]     = prevpopula[2,0:3]
                         ii                  = ii + 1
                 return transconfig[0:snaps]                              #Variable-outconfF saves Epigenetic configurations as a function of time and nucleosome position. 
-                                                                          #Variable transconfig saves mRNA, GFP,GFP* levels as a fucntion of time       
-########################################################### INPUT Parsed
-### STANDARD CODE PARAMETERS
-N           = 100               #Total Number of Nucleosomes.
-T           = 300               #End Time
-Tcyc        = 50                #Replication time
-############################################################### MODEL PARAMETERS
-### PRE/TRE Profiles
-M     = np.zeros(N, dtype=np.float64)       # a function of j; j [0,N] #PRC2 Methylation Protein
-#M     = M  + 0.01                              # Background
-DM    = np.zeros(N, dtype=np.float64)       # a function of k; k [0,N] #Demethylation Enzyme
-DM    = DM + 0                              # Background
-#M1    = np.zeros(N, dtype=np.float64)       # a function of k; k [0,N] #Demethylation Enzyme
-#M1    = M1 + 0.01 
+                                                                         #Variable transconfig saves mRNA, GFP,GFP* levels as a fucntion of time       
 
-i_start = 48                     #Nucleosome Position where the enzymes are localized
-i_end   = 52
-########################################################## Collapsed PARAMETERS
-K0          = 0.1              # Nucleosome turnover
-Kme         = 2*K0             # Acetylation, Methylation rate
-Kdme        = 0                # Demethylation rate
-Khdac       = 0                # Deacetylation Rate
-Eme         = .6               # Epsilon - spreading efficiency
-Edme        = 0                # Demethylation Spreading efficiency
-r           = 0                # Allosteric boost
-delta       = 0.0              # Reader Writer Mechanism
-gamma       = 1                # Contact Probability |i - j| exponent
-delT        = 1                # Determines the time interval between recording epigenetic configuration state. (Time resolution) 
-snaps       = np.int64(T/delT) # Number of timepoints
-limt        = 2400             # Number of Trajectories or cells 
-ts          = 20000            # Specifies the time at which painter unbinds    
-#TRANSCRIPTION
-a0          =  1               # Maximal transcription rate. Actual would be higher considering leaky rate 
-d           =  0.05            # Steepness of transcriptional switch  
-mc          = -0.4             # Critical magenetization value at which the switch happens
-mRNA        = 0
-GFP         = 0
-GFP_m       = 0
-m_decay     = 1/10
-g_decay     = 1/30
-m_gfp       = 1
-g_mat       = 1/10
-Ntot        = 10
-rconst      = 1
+M     = np.zeros(N, dtype=np.float64)
+#M     = M  + 0.01 
 for i in range(i_start,i_end+1):
     M[i]  =  1    
 Mij  = np.zeros((N, N))
