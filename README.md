@@ -2,7 +2,7 @@
 A unified quantitative framework to systematically characterize epigenome regulation and memory 
 Uses Gillespie algorithm to simulate. Ref https://pubs.acs.org/doi/10.1021/j100540a008
 
-Use appropriate parameter values mentioned in the article. 
+Run the Painter_Model.py, Use appropriate parameter values mentioned in the article to obtain the results.  
 ## Parameters
   >_K0_                  Nucleosome turnover rate\
   >_Kme_                 Acetylation, Methylation rate\
