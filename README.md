@@ -22,11 +22,11 @@ Run the Painter_Model.py, Use appropriate parameter values mentioned in the arti
   >_g_mat_               protein maturation rate\
   >_{i_start,i_end}_     specifying the painter region
   
-For transcription, transcribing region can be specified in line 130<br/>
-For enzyme limitation uncomment line 100. 
+For transcription, transcribing region can be specified in line 162<br/>
+For enzyme limitation uncomment line 132. 
   >_Ntot_        Total number of HMEs\
   >_rconst_      ku/kb = ratio binding-unbinding rates
     
 ## Output
-   Output is stored in the variable fin_out. Line 194 specifies transcription or chromatin state output to be stored. 
+   Output is stored in the variable fin_out. Line 226 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
