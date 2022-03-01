@@ -89,7 +89,15 @@ def PolycombPropensity(population,time): #nucconf- c1,c0,ci
             props      =  np.zeros((3,N), dtype=np.float64)
             propi0      = Piu.copy()                               #-1 to  0 # I to U
             rs          = np.zeros(N, dtype=np.float64)            #Enhanced Painting
-            dels        = np.zeros(N, dtype=np.float64)     
+            dels        = np.zeros(N, dtype=np.float64)
+            Nsite       = np.sum(ci)
+            alpha       = Ntot 
+    
+            if Nsite > 0:
+                        ps          = ((1 + Nsite/alpha + rconst/alpha) -  np.sqrt((1 + Nsite/alpha + rconst/alpha)**2 - 4*Nsite/alpha))/(2*(Nsite/alpha))
+            else:
+                        ps = 0
+            #delta      = ps        #For enzyme limitation 
             if time <= ts:
                 propi0      = Piu.copy()                           #-1 to  0 # I to U
                 if r !=0 or delta !=0:
