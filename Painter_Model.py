@@ -233,7 +233,9 @@ GFP_m       = 0
 m_decay     = 1/10
 g_decay     = 1/30
 m_gfp       = 1
-g_mat       = 1/10 
+g_mat       = 1/10
+Ntot        = 10
+rconst      = 1
 for i in range(i_start,i_end+1):
     M[i]  =  1    
 Mij  = np.zeros((N, N))
