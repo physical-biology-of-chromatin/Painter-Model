@@ -22,7 +22,7 @@ Use appropriate parameter values mentioned in the article.
   >_g_mat_               protein maturation rate\
   >_{i_start,i_end}_     specifying the painter region
   
-For transcription, transcribing region can be specified in line 130. 
+For transcription, transcribing region can be specified in line 130.\ 
 For enzyme limitation 
   >Ntot        Total number of HMEs\
   >rconst      ku/kb = ratio binding-unbinding rates
