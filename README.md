@@ -2,7 +2,7 @@
 A unified quantitative framework to systematically characterize epigenome regulation and memory 
 Uses Gillespie algorithm to simulate. Ref https://pubs.acs.org/doi/10.1021/j100540a008
 
-Run the Painter_Model.py, Use appropriate parameter values mentioned in the article to obtain the results.  
+Run the Painter_Model.py.  
 ## Parameters
   >_K0_                  Nucleosome turnover rate\
   >_Kme_                 Acetylation, Methylation rate\
@@ -26,7 +26,10 @@ For transcription, transcribing region can be specified in line 162<br/>
 For enzyme limitation uncomment line 132. 
   >_Ntot_        Total number of HMEs\
   >_rconst_      ku/kb = ratio binding-unbinding rates
-    
+
+(Use appropriate parameter values mentioned in the article to obtain the results)  
+ 
 ## Output
    Output is stored in the variable fin_out. Line 226 specifies transcription or chromatin state output to be stored. 
    'Output.txt' stores a single tajectory data as well.  
+   
