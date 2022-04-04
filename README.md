@@ -31,5 +31,5 @@ For enzyme limitation uncomment line 132.
  
 ## Output
    Output is stored in the variable fin_out. Line 226 specifies transcription or chromatin state output to be stored. 
-   'Output.txt' stores a single tajectory data as well.  
+   'Output.txt' stores single trajectory data as well.  
    
