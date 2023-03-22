@@ -1,5 +1,5 @@
 # Painter-Model
-A unified quantitative framework to systematically characterize epigenome regulation and memory. https://doi.org/10.1093/nar/gkac702
+A unified quantitative framework to systematically characterize epigenome regulation and memory. citation: https://doi.org/10.1093/nar/gkac702
 
 Uses Gillespie algorithm to simulate. Ref https://pubs.acs.org/doi/10.1021/j100540a008
 
