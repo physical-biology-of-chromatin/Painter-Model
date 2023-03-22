@@ -4,10 +4,7 @@ A unified quantitative framework to systematically characterize epigenome regula
 Uses Gillespie algorithm to simulate. Ref https://pubs.acs.org/doi/10.1021/j100540a008
 
 ## Requirements
-Python packages: 
-numpy 
-joblib
-numba
+Python packages: numpy, joblib, numba
 
 ## Run
 Run the Painter_Model.py. All the input parameters are desribed in the code. Use appropriate parameter values mentioned in the article to obtain the results
