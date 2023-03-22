@@ -13,6 +13,5 @@ Run the Painter_Model.py. All the input parameters are desribed in the code. Use
 
  
 ## Output
-   Output is stored in the variable fin_out. Line 226 specifies transcription or chromatin state output to be stored. 
-   'Output.txt' stores single trajectory data as well.  
+   Output is stored in the variable fin_out. LTranscriptional or chromatin state output to be stored may be specified. 'Output.txt' stores single trajectory data as well.  
    
