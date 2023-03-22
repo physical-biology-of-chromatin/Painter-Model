@@ -28,8 +28,8 @@ delT        = 1                # Determines the time interval between recording 
 snaps       = np.int64(T/delT) # Number of timepoints
 limt        = 2400             # Number of Trajectories or cells 
 ts          = 20000            # Specifies the time at which painter unbinds
-i_start     = 48                    
-i_end       = 52
+i_start     = 48               # specifying the painter region (start)
+i_end       = 52               # specifying the painter region (end)
 #TRANSCRIPTION
 a0          =  1               # Maximal transcription rate. 
 d           =  0.05            # Steepness of transcriptional switch  
@@ -37,12 +37,16 @@ mc          = -0.4             # Critical magenetization value at which the swit
 mRNA        = 0
 GFP         = 0
 GFP_m       = 0
-m_decay     = 1/10
-g_decay     = 1/30
-m_gfp       = 1
-g_mat       = 1/10
-Ntot        = 10
-rconst      = 1
+m_decay     = 1/10             # mRNA decay rate 
+g_decay     = 1/30             # protein decay rate
+m_gfp       = 1                # mRNA translation rate
+g_mat       = 1/10             # protein maturation rate
+Ntot        = 10               # Total number of HMEs
+rconst      = 1                # Ratio of binding-unbinding rates of HMEs
+
+#For transcription, transcribing region can be specified in line 166
+#For enzyme limitation uncomment line 136.
+
 @jit(nopython=True)
 def updation(num,population,N):
             c0        = population[0].copy()
