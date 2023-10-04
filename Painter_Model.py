@@ -230,7 +230,8 @@ def Stocha(traject_num):
                 return transconfig[0:snaps]                              #Variable-outconfF saves Epigenetic configurations as a function of time and nucleosome position. 
                                                                          #Variable transconfig saves mRNA, GFP,GFP* levels as a fucntion of time       
 
-M     = np.zeros(N, dtype=np.float64)
+M      = np.zeros(N, dtype=np.float64)
+DM     = np.zeros(N, dtype=np.float64)
 #M     = M  + 0.01 
 for i in range(i_start,i_end+1):
     M[i]  =  1    
