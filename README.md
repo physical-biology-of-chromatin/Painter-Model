@@ -7,9 +7,9 @@ Uses Gillespie algorithm to simulate.
 Python packages: joblib: only to parallelize (not essential)
 
 ## Run
-Run the Painter_Model.py. All the input parameters are desribed in the code. Use appropriate parameter values mentioned in the article to obtain the results
+Run the Painter_Model.py. All the input parameters are desribed in the code.
 
  
 ## Output
-   Output is stored in the variable fin_out. Transcriptional or chromatin state output to be stored may be specified. 
+Output is stored in the variable fin_out. Transcriptional or chromatin state output to be stored may be specified. 
    
