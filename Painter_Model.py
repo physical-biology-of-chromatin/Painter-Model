@@ -63,8 +63,7 @@ class Painter:
             M      = np.zeros(self.N, dtype=np.float64)
             DM     = np.zeros(self.N, dtype=np.float64)
             #M     = M  + 0.01 
-            for i in range(self.i_start,self.i_end+1):
-                M[i]  =  1    
+            M[self.i_start:self.i_end+1]  =  1    
             self.Mij  = np.zeros((self.N, self.N))
             self.Lij  = np.zeros((self.N, self.N))
             self.Piu  = np.zeros(self.N, dtype=np.float64)
